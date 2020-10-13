@@ -6,32 +6,32 @@ class Shape
 public:
  // pure virtual function providing interface framework.
  virtual int getArea() = 0;
- void setWidth(int w)
+ void setPi(int p)
  {
- width = w;
+ pi = p;
  }
- void setHeight(int h)
+ void setRaduis(int r)
  {
- height = h;
+ radius = r;
  }
 protected:
- int width;
- int height;
+ int pi;
+ int radius;
 };
-class Triangle: public Shape
+class Circle: public Shape
 {
 public:
  int getArea()
  {
- return (width * height)/2;
+ return (pi *(radius * radius));
  }
 };
 int main(void)
 {
- Triangle Tri;
- Tri.setWidth(5);
- Tri.setHeight(7);
+ Circle Cir;
+ Cir.setPi(5);
+ Cir.setRaduis(7);
  // Print the area of the object.
- cout << "Total Triangle area: " << Tri.getArea() << endl;
+ cout << "Total Circle area: " << Cir.getArea() << endl;
  return 0;
 }
